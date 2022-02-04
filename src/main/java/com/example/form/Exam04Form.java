@@ -1,8 +1,13 @@
 package com.example.form;
 
+import javax.validation.constraints.NotBlank;
+
 public class Exam04Form {
+	@NotBlank(message = "名前は必須です")
 	private String name;
+	@NotBlank(message = "年齢は必須です")
 	private String age;
+	@NotBlank(message = "コメントは必須です")
 	private String comment;
 
 	public String getName() {
@@ -13,8 +18,8 @@ public class Exam04Form {
 		this.name = name;
 	}
 
-	public Integer getIntAge() {
-		return Integer.parseInt(age);
+	public String getAge() {
+		return age;
 	}
 
 	public void setAge(String age) {
